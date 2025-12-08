@@ -1,6 +1,6 @@
 {
   "name": "tinybase",
-  "version": "7.0.1",
+  "version": "7.0.2-alpha.0",
   "author": "jamesgpearce",
   "repository": "github:tinyplex/tinybase",
   "license": "MIT",
@@ -235,3 +235,4 @@
     "yjs": "^13.6.27"
   }
 }
+
