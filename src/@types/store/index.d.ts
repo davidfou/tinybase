@@ -605,6 +605,11 @@ export interface Store {
   /// Store.transaction
   transaction<Return>(actions: () => Return, doRollback?: DoRollback): Return;
 
+  internalTransaction<Return>(
+    actions: () => Return,
+    doRollback?: DoRollback,
+  ): Return;
+
   /// Store.startTransaction
   startTransaction(): this;
 

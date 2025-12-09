@@ -484,7 +484,7 @@ export const createQueries = getCreateFunction((store: Store): Queries => {
                   arg2,
                 ]) as [Id, Id, Id]),
         );
-      selectJoinWhereStore.transaction(() =>
+      selectJoinWhereStore.internalTransaction(() =>
         arrayEvery(wheres, (where) => where(getTableCell))
           ? mapForEach(selects, (asCellId, tableCellGetter) =>
               setOrDelCell(
@@ -543,7 +543,7 @@ export const createQueries = getCreateFunction((store: Store): Queries => {
     };
 
     const {3: joinedTableIds} = mapGet(joins, undefined) as JoinClause;
-    selectJoinWhereStore.transaction(() =>
+    selectJoinWhereStore.internalTransaction(() =>
       addStoreListeners(
         queryId,
         1,
